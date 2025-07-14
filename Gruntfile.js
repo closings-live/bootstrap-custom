@@ -109,7 +109,6 @@ module.exports = function (grunt) {
           'js/transition.js',
           'js/alert.js',
           'js/button.js',
-          'js/carousel.js',
           'js/collapse.js',
           'js/dropdown.js',
           'js/modal.js',
@@ -426,5 +425,5 @@ module.exports = function (grunt) {
   grunt.registerTask('lint-docs-js', ['jshint:assets', 'jscs:assets']);
   grunt.registerTask('docs', ['docs-css', 'lint-docs-css', 'docs-js', 'lint-docs-js', 'clean:docs', 'copy:docs', 'build-glyphicons-data', 'build-customizer']);
 
-  grunt.registerTask('prep-release', ['dist', 'docs', 'jekyll:github']);
+  grunt.registerTask('prep-release', ['dist']);
 };
